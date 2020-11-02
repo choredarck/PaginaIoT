@@ -22,14 +22,14 @@ from pruebita import views
 #from .views import saludo, dameFecha, calculaEdad, HomeView, get_data
 
 from django.conf import settings
-from django.conf.url.static import static
+from django.conf.urls.static import static
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
     path('saludo/', views.saludo, name= "que-onda"),
     #path('fecha/', dameFecha), 
     #path('edades/<int:edad>/<int:agno>', calculaEdad),
-    path('', views.HomeView.as_view(), name="home"),
+    path('', views.HomeView.as_view(), name="index"),
     path('api/data/', views.get_data, name="api-data"),
     path('api/chart/data/', views.ChartData.as_view()),   
 ] +static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
