@@ -25,8 +25,8 @@ SECRET_KEY = 'eleowq$2gii9--k3a!i8=y!_4sh(y45jhh7dcjdc%e9#hgi!($'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
-#ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
+    #'rest_framework',
     #'pruebita.apps.PruebitaConfig',
 ]
 
