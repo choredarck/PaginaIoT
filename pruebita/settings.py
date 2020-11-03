@@ -25,7 +25,7 @@ SECRET_KEY = 'eleowq$2gii9--k3a!i8=y!_4sh(y45jhh7dcjdc%e9#hgi!($'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['pruebitaproduccion.herokuapp.com']
+ALLOWED_HOSTS = ['iotdi2020.herokuapp.com', '127.0.0.1']
 #ALLOWED_HOSTS = []
 
 
