@@ -29,7 +29,7 @@ urlpatterns = [
     path('saludo/', views.saludo, name= "que-onda"),
     #path('fecha/', dameFecha), 
     #path('edades/<int:edad>/<int:agno>', calculaEdad),
-    path('', views.HomeView.as_view(), name="index"),
+    path('', views.Index.as_view(), name="Index"),
     path('api/data/', views.get_data, name="api-data"),
     path('api/chart/data/', views.ChartData.as_view()),   
 ] +static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

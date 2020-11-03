@@ -48,9 +48,9 @@ def calculaEdad(request, edad, agno):
     return HttpResponse(documento)
 
 
-class HomeView(View):
+class Index(View):
     def get(self, request, *args, **kwargs):
-        return render(request, 'charts.html', {})
+        return render(request, 'Index.html', {})
 
 def get_data(request, *args, **kwargs):
     data= {
