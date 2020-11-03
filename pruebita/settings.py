@@ -58,7 +58,7 @@ ROOT_URLCONF = 'pruebita.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['pruebita/pruebita/templates/'],
+        'DIRS': ['pruebita/pruebita/templates/'],#'C:/Users/Chore-Darc/Desktop/CUCEI/Projects Django/pruebita/pruebita/templates/'
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
