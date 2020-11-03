@@ -26,6 +26,7 @@ SECRET_KEY = 'eleowq$2gii9--k3a!i8=y!_4sh(y45jhh7dcjdc%e9#hgi!($'
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
+#ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'pruebita.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/Chore-Darc/Desktop/CUCEI/Projects Django/pruebita/pruebita/templates/'],
+        'DIRS': [],#'C:/Users/Chore-Darc/Desktop/CUCEI/Projects Django/pruebita/pruebita/templates/'
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -88,18 +89,18 @@ WSGI_APPLICATION = 'pruebita.wsgi.application'
 #}
 
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-#}
+'''DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}'''
 
 import dj_database_url
 from decouple import config
 
 DATABASES = {
-    'default' : dj_database_url.config(
+    'default': dj_database_url.config(
         default= config('DATABASE_URL')
         )
 }
