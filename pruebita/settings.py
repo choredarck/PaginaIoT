@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-import os
+#import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'eleowq$2gii9--k3a!i8=y!_4sh(y45jhh7dcjdc%e9#hgi!($'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['iotdi2020.herokuapp.com', '127.0.0.1']
-#ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['iotdi2020.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'rest_framework',
+    'rest_framework',
     #'pruebita.apps.PruebitaConfig',
 ]
 
@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    #'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'pruebita.urls'
@@ -59,7 +59,7 @@ ROOT_URLCONF = 'pruebita.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['pruebita/pruebita/templates/'],#'C:/Users/Chore-Darc/Desktop/CUCEI/Projects Django/pruebita/pruebita/templates/'
+        'DIRS': ['C:/Users/Chore-Darc/Desktop/CUCEI/Projects Django/pruebita/pruebita/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -90,21 +90,21 @@ WSGI_APPLICATION = 'pruebita.wsgi.application'
 #}
 
 
-'''DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}'''
+}
 
-import dj_database_url
+'''import dj_database_url
 from decouple import config
 
 DATABASES = {
     'default': dj_database_url.config(
         default= config('DATABASE_URL')
         )
-}
+}'''
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -143,6 +143,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#STATICFILES_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
